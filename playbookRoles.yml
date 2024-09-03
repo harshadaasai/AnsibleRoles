@@ -1,0 +1,10 @@
+---
+- name: Execution of Roles
+  hosts: webserver
+  become: true
+  roles:
+    - apache
+    - myprojAnsible
+    - php
+    - wordpress
+
