@@ -1,0 +1,8 @@
+# tasks file for php
+---
+- name: Install php extension libraries
+  apt: name={{item}} state=present
+  loop:
+    - php-gd
+    - php-ssh2
+

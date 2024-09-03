@@ -1,0 +1,7 @@
+---
+# vars file for apache
+pkg_name: apache2
+dest_port: /etc/apache2/ports.conf 
+dest_conf: /etc/apache2/sites-enabled/000-default.conf
+root_url: /var/www/html
+document_root: /var/www/html

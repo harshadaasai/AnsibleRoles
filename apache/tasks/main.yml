@@ -1,0 +1,22 @@
+# tasks file for apache
+
+
+---
+- name: Install apache2 server
+  package: name=httpd state=present
+- name: Update ports.conf file of apache2
+  template: src=ports.conf.j2 dest={{dest_port}}
+- name: Update the default conf file on server
+  template: src=000-default.conf.j2 dest={{dest_conf}}
+- name: Deploy the index.html file on apache2 server
+  copy: src=index.html dest={{root_url}}
+  notify : Restart the apache2 server
+
+
+
+
+
+
+
+
+
